@@ -36,6 +36,7 @@ RUN pip3 install Flask
 # EXPOSE 5000
 
 # Set the working directory for the 'hsewdd' user
+RUN mkdir /home/hsewdd/app
 WORKDIR /home/hsewdd/app
 
 # Start your application, replace this with your actual command
