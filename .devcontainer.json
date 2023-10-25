@@ -1,0 +1,64 @@
+{
+  # "image": "docker.io/python:latest",
+  "build": { "dockerfile": "Dockerfile" },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "inferrinizzard.prettier-sql-vscode",
+        "ms-python.python", 
+        "ritwickdey.liveServer",
+        "vsls-contrib.gitdoc",
+        "cs50.ddb50"
+      ],
+      "settings": {
+        "breadcrumbs.enabled": false,
+        "extension-uninstaller.uninstall": [
+          "Codeium.codeium",
+          "Codeium.codeium-enterprise-updater",
+          "github.copilot",
+          "github.copilot-nightly",
+          "ms-toolsai.vscode-jupyter-cell-tags",
+          "tabnine.tabnine-vscode"
+        ],
+        "editor.minimap.enabled": false,
+        "files.autoSave": "afterDelay",
+        "files.exclude": {
+          "**/.*":true,
+          "Dockerfile":true
+        },
+        "terminal.integrated.enableBell": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.gpuAcceleration": "off",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal",
+            "path": "bash"
+          },
+          "JavaScript Debug Terminal": null
+        },
+        "terminal.integrated.persistentSessionReviveProcess": "never",
+        "terminal.integrated.sendKeybindingsToShell": true,
+        "terminal.integrated.shellIntegration.enabled": true,
+        "terminal.integrated.shellIntegration.decorationsEnabled": "never", /* Remove decoration for each command */
+        "terminal.integrated.tabs.description": "${task}${separator}${local}", /* Remove cwdFolder from description */
+        "terminal.integrated.tabs.showActiveTerminal": "never",
+        "files.watcherExclude": {
+          "**/.git/objects/**": true,
+          "**/.git/subtree-cache/**": true,
+          "**/node_modules/*/**": true
+        },
+        "git.autofetch":true,
+        "gitdoc.autoPull": "off",
+        "git.commitMessageFormat": "ccc, LLL d, kkkk, h:mm a ZZ",
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.CustomBrowser": "chrome"
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
