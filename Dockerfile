@@ -18,13 +18,16 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
 # Set the command line prompt to show the current working folder
-RUN echo 'export PS1="\w$ "' >> /root/.bashrc
+#RUN echo 'export PS1="\w$ "' >> /root/.bashrc
 
 # Create a new user 'hsewdd'
 RUN useradd -m -s /bin/bash hsewdd
 
 # Switch to the 'hsewdd' user
 USER hsewdd
+
+# Set the command line prompt to show the current working folder
+RUN echo 'export PS1="\w$ "' >> /home/hsewdd/.bashrc
 
 # Install Flask using pip
 RUN pip3 install Flask
