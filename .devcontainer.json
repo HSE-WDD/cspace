@@ -1,5 +1,5 @@
 {
-  # "image": "docker.io/python:latest",
+  /* "image": "docker.io/python:latest", */
   "build": { "dockerfile": "Dockerfile" },
   "customizations": {
     "vscode": {
