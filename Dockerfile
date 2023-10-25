@@ -37,8 +37,8 @@ RUN pip3 install Flask
 
 # Set the working directory for the 'hsewdd' user
 #RUN mkdir /home/hsewdd/app
-RUN cd /home/hsewdd
-#WORKDIR /home/hsewdd/app
+RUN cd /home/hsewdd/
+WORKDIR /home/hsewdd/
 
 # Start your application, replace this with your actual command
 # CMD ["python3", "app.py"]
